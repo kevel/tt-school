@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  vue:
+    image: node:16.15.0-alpine
+    ports:
+      - 3000:3000
+    volumes:
+      - ./vue:/var/www
+    working_dir: /var/www
+#    command: /bin/bash -c "npm run dev"
+    command: /bin/ash -c "tail -f /dev/null"
